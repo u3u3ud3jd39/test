@@ -1,0 +1,34 @@
+# Dictionary to store URLs and their corresponding IP addresses
+dns_records = {}
+
+# Function to add URL and IP address to the dictionary
+def add_dns_record():
+    for _ in range(5):
+        url = input("Enter a URL: ")
+        ip = input("Enter the corresponding IP address: ")
+        dns_records[url] = ip
+
+# Function to get IP address for a given URL
+def get_ip_for_url():
+    url = input("Enter a URL from the list: ")
+    if url in dns_records:
+        print("IP address for", url, "is", dns_records[url])
+    else:
+        print("URL not found in DNS records")
+
+# Main function
+def main():
+    print("Welcome to the Simple DNS Server")
+
+
+    # Step 1: Add URLs and IP addresses
+    print("Step 1: Add URLs and IP addresses")
+    add_dns_record()
+
+    # Step 2: Get IP address for a given URL
+    print("\nStep 2: Get IP address for a given URL")
+    get_ip_for_url()
+
+# Run the main function
+if _name_ == "_main_":
+    main()
